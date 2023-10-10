@@ -7,7 +7,7 @@ val = ["sten", "sax", "påse"]
 print ("Välkommen till sten sax påse!")
 
 #Loopa till någon har vunnit 5 gånger
-while dator_poäng < 5 and spelare_poäng < 5:
+while dator_poäng < 3 and spelare_poäng < 3:
     # slumpa datorns val
     dator_val = random.choice (val)
 
