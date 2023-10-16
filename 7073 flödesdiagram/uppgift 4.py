@@ -1,11 +1,11 @@
-svar = input("Skriv in ett tal: ")
-if svar == (0, 9):
+svar = int(input("Skriv in ett tal: "))
+if 0 <= svar and svar <= 9:
     print (svar, "är ett ensiffrigt tal")
-elif svar == 10 <= 99:
+elif 10 <= svar and svar <= 99:
     print (svar, "är ett tvåsiffrigt tal")
-elif svar == 100 <= 999:
+elif 100 <= svar and svar <= 999:
     print (svar, "är ett tresiffrigt tal")
-elif svar == 'svar' < 0:
+elif svar <= -1:
     print(svar, "är ett negativt tal")
 else:
     print (svar, "är minst ett fyrsiffrigt tal")
