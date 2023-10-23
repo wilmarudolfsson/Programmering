@@ -1,5 +1,29 @@
 Loggbok
 ===========
+23 10 23
+------------
+Gjorde:
+### 7095 for-slingor med range
+### 7096 for each-slinga
+### 7100 listor
+
+Jag har börjat lära mig hur man gör listor.
+
+Exempel:
+for i in range (10):
+    tärningar.append(random.randint(1, 6))
+
+print(tärningar)
+tärningar.sort()
+print("sorterad:", tärningar)
+print("summa", sum(tärningar))
+medel= sum(tärningar)/ len(tärningar)
+print("medel:", medel)
+print("min", min(tärningar))
+print ("max", max(tärningar))
+print("antal sexor", tärningar.count(6))
+
+
 23 10 20
 ------------
 Gjorde:
