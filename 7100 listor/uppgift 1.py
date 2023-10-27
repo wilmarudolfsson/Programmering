@@ -15,9 +15,17 @@ print("min", min(tärningar))
 print ("max", max(tärningar))
 print("antal sexor", tärningar.count(6))
 
-("antal ettor", tärningar.count(1))
-("antal tvåor", tärningar.count(2))
-("antal treor", tärningar.count(3))
-("antal fyror", tärningar.count(4))
-("antal femor", tärningar.count(5))
+antal = [0]
+for i in range(1, 7):
+    antal.append(tärningar.count(i))
+
 lista = ["1", "2", "3", "4", "5", "6"]
+
+maximum = max(antal)
+vanligaste_tärningen = antal.index(maximum)
+
+print("Vanligaste valör: ",vanligaste_tärningen)
+
+
+
+

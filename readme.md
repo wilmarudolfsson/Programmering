@@ -1,5 +1,17 @@
 Loggbok
 ===========
+23 10 27
+------------
+Gjorde:
+### 7100 listor
+
+Jag gjorde klart uppgift 1 och gjorde klart uppgift 2 om att skriva ut primtal
+
+Exempel:
+for i in range(2, 100):
+        if is_prime(i):
+            print (i)
+            
 23 10 23
 ------------
 Gjorde:
