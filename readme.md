@@ -1,5 +1,18 @@
 Loggbok
 ===========
+23 11 10
+-----------
+Gjorde:
+### 7100 listor
+
+Jag programerade rövarspråket in i python. Sen började jag med Caesarchiffer men blev inte klar.
+
+Exempel:
+
+def rövarSpråkTranslator(message):
+    VOWELS = ('a','e','i','o','y','å','ä','ö')
+    translatedWords = []
+    
 23 10 27
 ------------
 Gjorde:
