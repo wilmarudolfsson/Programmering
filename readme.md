@@ -1,5 +1,25 @@
 Loggbok
 ===========
+23 11 14
+------------
+Gjorde: 
+### 7100 listor
+
+Jag gjorde klart mina Caesarchiffer.
+
+Exempel:
+if text == 'd':
+    for bokstav in text_2:
+        i = svar.index(bokstav)
+        i = i - 1
+        if i > 28:
+            i = i - 29
+        if i < 0:
+            i = i + 29
+        meddelande += svar[i]
+
+    print(meddelande)
+    
 23 11 10
 -----------
 Gjorde:

@@ -5,8 +5,14 @@ meddelande = ""
 
 for bokstav in text:
     i = svar.index(bokstav)
-    # om i + 1 är för mycket -> flytta 29 steg åt vänster
-    meddelande += svar[i+1]
+    # om i + 1 är för mycket, mer än 28 -> flytta 29 steg åt vänster
+    # max i är ca 28
+    #print(svar.index("ö"))
+    i = i + 1
+    if i> 28:
+        i = i - 29
+    meddelande += svar[i]
+
 print(meddelande)
     
 '''
