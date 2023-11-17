@@ -1,6 +1,19 @@
 Loggbok
 ===========
-23 11 14
+23 11 17
+------------
+Gjorde:
+### 7100 listor
+
+Programmerade tärningar som skulle räknas ihop till yatzy.
+
+Exempel:
+is_yatzy = True
+for tärning in tärningar:
+    if t != tärning:
+        is_yatzy = False
+        
+23 11 13
 ------------
 Gjorde: 
 ### 7100 listor
