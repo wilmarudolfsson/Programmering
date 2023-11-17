@@ -8,11 +8,12 @@ Gjorde:
 Programmerade tärningar som skulle räknas ihop till yatzy.
 
 Exempel:
+
 is_yatzy = True
 for tärning in tärningar:
     if t != tärning:
         is_yatzy = False
-        
+
 23 11 13
 ------------
 Gjorde: 
@@ -21,6 +22,7 @@ Gjorde:
 Jag gjorde klart mina Caesarchiffer.
 
 Exempel:
+
 if text == 'd':
     for bokstav in text_2:
         i = svar.index(bokstav)
