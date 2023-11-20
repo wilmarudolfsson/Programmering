@@ -1,5 +1,23 @@
 Loggbok
 ===========
+23 11 20
+------------
+Gjorde:
+### 7100 listor
+
+Började att programmera jackblack
+
+Exempel:
+
+def blackjack_spel(kortlek):
+
+    spelare_korten = []
+    dealern_korten = []
+
+    spelare_poäng = 0
+    dealern_poäng = 0
+
+
 23 11 17
 ------------
 Gjorde:
