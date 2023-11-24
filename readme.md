@@ -1,5 +1,18 @@
 Loggbok
 ===========
+23 11 24
+---------
+Gjorde:
+### 7100 listor
+
+Fortsatta att skriva på koden till BlackJack. Började också lära mig om klasser för att göra det ennklare för mig att skriva koden till BlackJack.
+
+Exempel:
+
+class Card:
+    def __init__(self, suit, value, card_value):
+
+    
 23 11 20
 ------------
 Gjorde:
