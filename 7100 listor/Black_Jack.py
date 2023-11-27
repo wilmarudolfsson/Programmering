@@ -38,7 +38,7 @@ def print_cards(cards, hidden):
         if card.value == '10':
             s = s + "\t|  {}            |".format(card.value)
         else:
-            s = s + "\t|  {}            |".format(card.value)
+            s = s + "\t|  {}             |".format(card.value)
     if hidden:
         s += "\t|                |"
     print(s)
@@ -126,7 +126,7 @@ def print_cards(cards, hidden):
     print()
 
 
-def blackjack_spel(deck):
+def blackjack_game(deck):
 
     player_cards = []
     dealer_cards = []
@@ -139,7 +139,7 @@ def blackjack_spel(deck):
     while len(player_cards) < 2:
 
         player_card = random.choice(deck)
-        player_cards.append()
+        player_cards.append(player_card)
         deck.remove(player_card)
 
         player_score += player_card.card_value
@@ -149,25 +149,25 @@ def blackjack_spel(deck):
                 player_cards[0].card_value = 1
                 player_score -= 10
         
-        print("Spelarens kort: ")
+        print("DINA KORT: ")
         print_cards(player_cards, False)
-        print("Spelare poäng = ", player_score)
+        print("DINA POÄNG = ", player_score)
 
         input()
 
-        dealer_card = random.choise(deck)
+        dealer_card = random.choice(deck)
         dealer_cards.append(dealer_card)
         deck.remove(dealer_card)
 
         dealer_score += dealer_card.card_value
 
-        print("Dealerns kort: ")
+        print("DEALERNS KORT: ")
         if len(dealer_cards) == 1:
             print_cards(dealer_cards, False)
-            print("Dealerns poäng = ", dealer_score)
+            print("DEALERNS POÄNG = ", dealer_score)
         else:
             print_cards(dealer_cards[:-1], True)
-            print("Dealerns poäng = ", dealer_score - dealer_cards[-1].card_value)
+            print("DEALERNS POÄNG = ", dealer_score - dealer_cards[-1].card_value)
 
         if len(dealer_cards) == 2:
             if dealer_cards[0].card_value == 11 and dealer_cards[1].card_value == 11:
@@ -177,21 +177,21 @@ def blackjack_spel(deck):
         input()
 
     if player_score == 21:
-        print("SPELAREN HAR BLACKJACK!!!")
-        print("SPELAREN VINNER!!")
+        print("DU HAR HAR BLACKJACK!!!")
+        print("DU VINNER!!!")
         quit()
     
     clear()
 
-    print("Dealerns kort: ")
+    print("DEALERNS KORT: ")
     print_cards(dealer_cards[:-1], True)
-    print("Dealerns poäng = ", dealer_score-dealer_cards[-1].card_value)
+    print("DEALERNS POÄNG = ", dealer_score-dealer_cards[-1].card_value)
 
     print()
 
-    print("Spelarens kort: ")
+    print("DINA KORT: ")
     print_cards(player_cards, False)
-    print("Spelarens poäng = ",player_score)
+    print("DINA POÄNG = ",player_score)
     
 
     while player_score < 21:
@@ -199,7 +199,7 @@ def blackjack_spel(deck):
 
         if len(choice) !=1 or (choice.upper() != 'H' and choice.upper() != 'S'):
             clear()
-            print("Fel svar!!! Försök igen")
+            print("FEL SVAR!!! FÖRSÖK IGEN!!")
 
         if choice.upper() == 'H':
 
@@ -212,7 +212,7 @@ def blackjack_spel(deck):
             c = 0
             while player_score > 21 and c < len(player_cards):
                 if player_cards[c].card_value == 11:
-                    player_cards[c].card.value = 1
+                    player_cards[c].card_value = 1
                     player_score -= 10
                     c += 1
                 else:
@@ -220,39 +220,38 @@ def blackjack_spel(deck):
             
             clear()
 
-            print("Dealerns kort: ")
+            print("DEALERNS KORT: ")
             print_cards(dealer_cards[:-1], True)
-            print("Dealerns poäng = ", dealer_score - dealer_cards[-1].card.value)
+            print("DEALERNS POÄNG = ", dealer_score - dealer_cards[-1].card_value)
 
             print()
 
-            print("Spelarens kort: ")
+            print("DINA KORT: ")
             print_cards(player_cards, False)
-            print("Spelarens poäng = ", player_score)
+            print("DINA POÄNG = ", player_score)
 
         if choice.upper() == 'S':
             break
 
-
         clear()
 
-        print("Spelarens kort: ")
+        print("DINA KORT: ")
         print_cards(player_cards, False)
-        print("Spelarens poäng = ", player_score)
+        print("DINA POÄNG = ", player_score)
 
         print()
-        print("Dealern avslöjar korten...")
+        print("DEALERN AVSLÖJAR KORTEN......")
 
-        print("Dealerns kort: ")
+        print("DEALERNS KORT: ")
         print_cards(dealer_cards, False)
-        print("Dealerns poäng = ", dealer_score)
+        print("DEALERNS POÄNG = ", dealer_score)
 
         if player_score == 21:
-            print("Spelaren har BlackJack")
+            print("DU HAR BLACKJACK")
             quit()
 
         if player_score > 21:
-            print("Spelaren har blivit tjock!! Spelet är slut")
+            print("DU HAR BLIVIT TJOCK!!!SPELET ÄR SLUT")
             quit()
 
         input()
@@ -260,7 +259,7 @@ def blackjack_spel(deck):
         while dealer_score < 17:
             clear()
 
-            print("Dealern har bestämt sig för Hit....")
+            print("DEALERN HAR BESTÄMT SIG FÖR HIT....")
 
             dealer_card = random.choice(deck)
             dealer_cards.append(dealer_card)
@@ -268,6 +267,7 @@ def blackjack_spel(deck):
 
             dealer_score += dealer_card.card_value
 
+            c = 0
             while dealer_score > 21 and c < len(dealer_cards):
                 if dealer_cards[c].card_value == 11:
                     dealer_cards[c].card.value = 1
@@ -277,20 +277,55 @@ def blackjack_spel(deck):
                     c += 1
             
 
-            print("Spelarens poäng: ")
+            print("DINA KORT: ")
             print_cards(player_cards, False)
-            print("Spelarens poäng = ", player_score)
+            print("DINA POÄNG = ", player_score)
 
             print()
 
-            print("Dealerns kort: ")
+            print("DEALERNS KORT: ")
             print_cards(dealer_cards, False)
-            print("Dealerns poäng = ", dealer_score)
+            print("DEALERNS POÄNG = ", dealer_score)
 
             input()
 
         #dealern bust
-        
+        if dealer_score > 21:
+            print("DEALERN HAR BLIVIT TJOCK!!! DU VINNER!!!")
+            quit()
+
+        if dealer_score == 21:
+            print("DEALERN HAR FÅTT BLACKJACK!! DU FÖRLORADE!!")
+            quit()
+
+        if dealer_score == player_score:
+            print("DET BLEV OAVGJORT!!!")
+
+        elif player_score > dealer_score:
+            print("DU VANN!!!")
+
+        else:
+            print("DEALERN VANN!!!")
+
+if __name__ == '__main__':
+
+    suits = ["Spades", "Hearts", "Clubs", "Dimonds"]
+
+    suits_values = {"Spades":"\u2664", "Hearts":"\u2661","Clubs":"\u2667", "Dimonds":"\u2662"}
+
+    cards = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"]
+
+    cards_values = {"A":11, "2":2, "3":3, "4":4, "5":5, "6":6, "7":7, "8":8, "9":9, "10":10, "J":10, "Q":10, "K":10 }
+
+    deck =[]
+
+    for suit in suits:
+
+        for card in cards:
+            
+            deck.append (Card(suits_values[suit], card, cards_values[card])) 
+
+    blackjack_game(deck)   
 
 
 
