@@ -1,5 +1,13 @@
 Loggbok
 ===========
+23 11 27
+----------
+Gjorde:
+### 7100 listor
+
+Har inprincip blivit klar med BlackJack men det finns vissa små saker jag måste fixa för att de ska funka helt å hållet.
+
+
 23 11 24
 ---------
 Gjorde:
