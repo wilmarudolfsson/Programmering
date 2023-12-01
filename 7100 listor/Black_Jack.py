@@ -195,11 +195,11 @@ def blackjack_game(deck):
     
 
     while player_score < 21:
-        choice = input("Skriv in H för Hit eller S för Stand: ")
+        choice = input("SKRIV IN H FÖR HIT OCH S FÖR STAND: ")
 
         if len(choice) !=1 or (choice.upper() != 'H' and choice.upper() != 'S'):
             clear()
-            print("FEL SVAR!!! FÖRSÖK IGEN!!")
+            print("FEL SVAR!!! FÖRSÖK IGEN!!!")
 
         if choice.upper() == 'H':
 
@@ -233,79 +233,79 @@ def blackjack_game(deck):
         if choice.upper() == 'S':
             break
 
+    clear()
+
+    print("DINA KORT: ")
+    print_cards(player_cards, False)
+    print("DINA POÄNG = ", player_score)
+
+    print()
+    print("DEALERN AVSLÖJAR KORTEN......")
+
+    print("DEALERNS KORT: ")
+    print_cards(dealer_cards, False)
+    print("DEALERNS POÄNG = ", dealer_score)
+
+    if player_score == 21:
+        print("DU HAR BLACKJACK!!!")
+        quit()
+
+    if player_score > 21:
+        print("DU HAR BLIVIT TJOCK!!! SPELET ÄR SLUT!!!")
+        quit()
+
+    input()
+
+    while dealer_score < 17:
         clear()
+
+        print("DEALERN HAR BESTÄMT SIG FÖR HIT....")
+
+        dealer_card = random.choice(deck)
+        dealer_cards.append(dealer_card)
+        deck.remove(dealer_card)
+
+        dealer_score += dealer_card.card_value
+
+        c = 0
+        while dealer_score > 21 and c < len(dealer_cards):
+            if dealer_cards[c].card_value == 11:
+                dealer_cards[c].card.value = 1
+                dealer_score -= 10
+                c += 1
+            else:
+                c += 1
+            
 
         print("DINA KORT: ")
         print_cards(player_cards, False)
         print("DINA POÄNG = ", player_score)
 
         print()
-        print("DEALERN AVSLÖJAR KORTEN......")
 
         print("DEALERNS KORT: ")
         print_cards(dealer_cards, False)
         print("DEALERNS POÄNG = ", dealer_score)
 
-        if player_score == 21:
-            print("DU HAR BLACKJACK")
-            quit()
-
-        if player_score > 21:
-            print("DU HAR BLIVIT TJOCK!!!SPELET ÄR SLUT")
-            quit()
-
         input()
 
-        while dealer_score < 17:
-            clear()
-
-            print("DEALERN HAR BESTÄMT SIG FÖR HIT....")
-
-            dealer_card = random.choice(deck)
-            dealer_cards.append(dealer_card)
-            deck.remove(dealer_card)
-
-            dealer_score += dealer_card.card_value
-
-            c = 0
-            while dealer_score > 21 and c < len(dealer_cards):
-                if dealer_cards[c].card_value == 11:
-                    dealer_cards[c].card.value = 1
-                    dealer_score -= 10
-                    c += 1
-                else:
-                    c += 1
-            
-
-            print("DINA KORT: ")
-            print_cards(player_cards, False)
-            print("DINA POÄNG = ", player_score)
-
-            print()
-
-            print("DEALERNS KORT: ")
-            print_cards(dealer_cards, False)
-            print("DEALERNS POÄNG = ", dealer_score)
-
-            input()
-
         #dealern bust
-        if dealer_score > 21:
-            print("DEALERN HAR BLIVIT TJOCK!!! DU VINNER!!!")
-            quit()
+    if dealer_score > 21:
+        print("DEALERN HAR BLIVIT TJOCK!!! DU VINNER!!!")
+        quit()
 
-        if dealer_score == 21:
-            print("DEALERN HAR FÅTT BLACKJACK!! DU FÖRLORADE!!")
-            quit()
+    if dealer_score == 21:
+        print("DEALERN HAR FÅTT BLACKJACK!!! DU FÖRLORADE!!!")
+        quit()
 
-        if dealer_score == player_score:
-            print("DET BLEV OAVGJORT!!!")
+    if dealer_score == player_score:
+        print("DET BLEV OAVGJORT!!!")
 
-        elif player_score > dealer_score:
-            print("DU VANN!!!")
+    elif player_score > dealer_score:
+        print("DU VANN!!!")
 
-        else:
-            print("DEALERN VANN!!!")
+    else:
+        print("DEALERN VANN!!!")
 
 if __name__ == '__main__':
 
