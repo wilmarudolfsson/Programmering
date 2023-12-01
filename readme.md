@@ -1,5 +1,28 @@
 Loggbok
 ===========
+23 12 01
+----------
+Gjorde:
+### 7100 listor
+
+Blev klar med mitt BlackJack spel så nu går de att spela helt å hållet. Har öppnat en ny fil för Yatzy och börjat skriva lite grann men har inte hunnit med så mycket idag för jag blev precis klar med BlackJack. 
+
+Exempel:
+
+if __name__ == '__main__':
+
+    suits = ["Spades", "Hearts", "Clubs", "Dimonds"]
+
+    suits_values = {"Spades":"\u2664", "Hearts":"\u2661","Clubs":"\u2667", "Dimonds":"\u2662"}
+
+    cards = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"]
+
+    cards_values = {"A":11, "2":2, "3":3, "4":4, "5":5, "6":6, "7":7, "8":8, "9":9, "10":10, "J":10, "Q":10, "K":10 }
+
+    deck =[]
+
+    
+
 23 11 27
 ----------
 Gjorde:
