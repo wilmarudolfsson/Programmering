@@ -1,5 +1,13 @@
 Loggbok
 ===========
+23 12 04
+----------
+Gjorde:
+### 7100 listor
+
+Förtsatt på mitt yatzy spel. Har en bra bit kvar men har kommit en bra bit under denna lektion.
+
+
 23 12 01
 ----------
 Gjorde:
@@ -21,7 +29,7 @@ if __name__ == '__main__':
 
     deck =[]
 
-    
+
 
 23 11 27
 ----------
