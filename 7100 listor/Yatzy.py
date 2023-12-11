@@ -1,86 +1,43 @@
-'''
-from random import randint
-
-def singleGame():
-    roll1 = roll()
-    print(format("Du slog: ", '64s'), roll1)
-    print("")
-    holdPrompt = input("Byta ut någon/några tärningar? (y för HITME, n för HOLD): ")
-    print("")
-    holdPrompt.replace(" ", "")
-    holdPrompt.lower()
-    while holdPrompt != "y" and holdPrompt != "n":
-        print("Fel input\n")
-        holdPrompt = input("Byta ut någon/några tärningar? (y för HITME, n för HOLD):")
-        print("")
-        holdPrompt.replace(" ", "")
-        holdPrompt.lowert()
-    
-    if holdPrompt == "y":
-        roll2 = swap(roll1)
-        print("")
-        print("Byter:", roll2[1])
-        print("")
-        print(format("Du rullade: ",'64s'), roll2[0])
-        print("")
-        holdPrompt2 = input("Byta ut någon/några tärningar? (y för HITME, n för HOLD):")
-        print("")
-        while holdPrompt2 != "y" and holdPrompt2 != "n":
-            print("Fel input\n")
-            holdPrompt2 = input("Byta ut någon/några tärningar? (y för HITME, n för HOLD):")
-            print("")
-            holdPrompt2.replace(" ", "")
-            holdPrompt2.lower()
-        if holdPrompt2 == "y":
-            swapPrint = []
-            roll3 = swap(roll2[0])
-            print("")
-            print("Swapping:", roll3[1])
-            print("")
-            print(format("You rolled: ", '64s'), roll3[0])
-            print("")
-            stat = rollType(roll3[0])
-'''
 
 from random import randint
 
 def singleGame():
     roll1 = roll()
-    print(format("You rolled: ", '64s'), roll1)
+    print(format("DU SLOG: ", '64s'), roll1)
     print("")
-    holdPrompt = input("Swap any dice? (y for HITME, n for HOLD): ")
+    holdPrompt = input("BYTA UT NÅGON/NÅGRA TÄRNINGAR? (j för HITME, n för HOLD): ")
     print("")
     holdPrompt.replace(" ", "")
     holdPrompt.lower()
-    while holdPrompt != "y" and holdPrompt != "n":
-        print("INCORRECT INPUT\n")
-        holdPrompt = input("Swap any dice? (y for HITME, n for HOLD): ")
+    while holdPrompt != "j" and holdPrompt != "n":
+        print("FEL INPUT\n")
+        holdPrompt = input("BYTA UT NÅGON/NÅGRA TÄRNINGAR? (j för HITME, n för HOLD):")
         print("")
         holdPrompt.replace(" ", "")
         holdPrompt.lower()
-
-    if holdPrompt == "y":
+    
+    if holdPrompt == "j":
         roll2 = swap(roll1)
         print("")
-        print("Swapping:", roll2[1])
+        print("BYTER:", roll2[1])
         print("")
-        print(format("You rolled: ", '64s'), roll2[0])
+        print(format("DU RULLADE: ",'64s'), roll2[0])
         print("")
-        holdPrompt2 = input("Swap any dice? (y for HITME, n for HOLD): ")
+        holdPrompt2 = input("BYTA UT NÅGON/NÅGRA TÄRNINGAR? (j för HITME, n för HOLD):")
         print("")
-        while holdPrompt2 != "y" and holdPrompt2 != "n":
-            print("INCORRECT INPUT\n")
-            holdPrompt2 = input("Swap any dice? (y for HITME, n for HOLD): ")
+        while holdPrompt2 != "j" and holdPrompt2 != "n":
+            print("FEL INPUT\n")
+            holdPrompt2 = input("BYTA UT NÅGON/NÅGRA TÄRNINGAR? (j för HITME, n för HOLD):")
             print("")
             holdPrompt2.replace(" ", "")
             holdPrompt2.lower()
-        if holdPrompt2 == "y":
+        if holdPrompt2 == "j":
             swapPrint = []
             roll3 = swap(roll2[0])
             print("")
-            print("Swapping:", roll3[1])
+            print("BYTER:", roll3[1])
             print("")
-            print(format("You rolled: ", '64s'), roll3[0])
+            print(format("DU RULLADE: ", '64s'), roll3[0])
             print("")
             stat = rollType(roll3[0])
         else:
@@ -94,14 +51,14 @@ def singleGame():
 
 def roll():
     dice = []
-    for x in range(5):
+    for x in range (5):
         dice.append(randint(1, 6))
     return dice
 
 
 def swap(diceList):
     valid = True
-    swapDice = input("Type position of each die you'd like to swap (1-5): ")
+    swapDice = input("SKRIV POSITIONEN AV TÄRNINGARNA SOM DU VILL BYTA UT (1-5): ")
     swapDice = swapDice.replace(",", "")
     swapDice = swapDice.replace(" ", "")
     swapDiceList = []
@@ -117,12 +74,12 @@ def swap(diceList):
                 valid = False
         else:
             valid = False
-   
+
     while valid == False:
         print("")
-        print("INCORRECT INPUT")
+        print("FEL INPUT")
         print("")
-        swapDice = input("Type position of each die you'd like to swap (1-5): ")
+        swapDice = input("SKRIV POSITIONEN AV TÄRNINGARNA SOM DU VILL BYTA UT (1-5): ")
         swapDice = swapDice.replace(",", "")
         swapDice = swapDice.replace(" ", "")
         swapDiceList = []
@@ -136,11 +93,12 @@ def swap(diceList):
                     valid = True
                 else:
                     valid = False
-            else:
+            else: 
                 valid = False
-        
+
+
     swapIndex = []
-    
+
     for x in swapDiceList:
         swapIndex.append(int(x)-1)
 
@@ -151,8 +109,8 @@ def swap(diceList):
     for x in swapIndex:
         diceList.pop(x)
         diceList.insert(x, randint(1, 6))
-        
-    # returns modified list at index [0] and dice to be swapped at [1]
+
+
     return diceList, swapDiceList
 
 def rollType(diceList):
@@ -161,116 +119,116 @@ def rollType(diceList):
         counts.append(diceList.count(x))
     diceListNew = sorted(diceList)
     diceListNew = list(set(diceListNew))
-    yahtzee = False
-    fullHouse = False
-    smallStraight = False
-    largeStraight = False
-    fourOfKind = False
-    threeOfKind = False
+    yatzy = False
+    kåk = False
+    litenStege = False
+    storStege = False
+    fyrTal = False
+    Triss = False
     oneCount = 0
-    
+
     if 5 in counts:
-        yahtzee = True
-        print(format("YAHTZEE", '>80s'))
+        yatzy = True
+        print(format("YATZY", '>80s'))
     elif 3 in counts and 2 in counts:
-        fullHouse = True
-        print(format("FULL HOUSE", '>80s'))
+        kåk = True
+        print(format("KÅK", '>80s'))
     elif 3 in counts and 2 not in counts:
-        threeOfKind = True
-        print(format("THREE OF A KIND", '>80s'))
+        Triss = True
+        print(format("Triss", '>80s'))
     elif 4 in counts:
-        fourOfKind = True
-        print(format("FOUR OF A KIND", '>80s'))
+        fyrTal = True
+        print(format("FYRTAL", '>80s'))
     elif len(diceListNew) == 3:
-        print(format("NOTHING SPECIAL", '>80s'))
+        print(format("INGET SPECIELLT", '>80s'))
     elif len(diceListNew) == 4:
-        if diceListNew[-2] == diceListNew[-1] -1 and diceListNew[-3] == diceListNew[-2] - 1 and diceListNew[-4] == diceListNew[-3] - 1:
-            smallStraight = True
-            print(format("SMALL STRAIGHT", '>80s'))
+        if diceListNew[-2] == diceListNew[-1] -1 and diceListNew[-3] == diceListNew[-2] -1 and diceListNew[-4] == diceListNew[-3] -1:
+            litenStege = True
+            print(format("LITEN STEGE", '>80s'))
         else:
-            print(format("NOTHING SPECIAL", '>80s'))
+            print(format("INGET SPECIELLT", '>80S'))
     elif len(diceListNew) == 5:
         if diceListNew[-2] == diceListNew[-1] - 1 and diceListNew[-3] == diceListNew[-2] - 1 and diceListNew[-4] == diceListNew[-3] - 1 and diceListNew[-5] == diceListNew[-4] - 1:
-            largeStraight = True
-            print(format("LARGE STRAIGHT", '>80s'))
+            storStege = True
+            print(format("STOR STEGE", '>80s'))
         elif diceListNew[-2] == diceListNew[-1] -1 and diceListNew[-3] == diceListNew[-2] - 1 and diceListNew[-4] == diceListNew[-3] - 1:
-            smallStraight = True
-            print(format("SMALL STRAIGHT", '>80s'))
+            litenStege = True
+            print(format("LITEN STEGE", '>80s'))
         elif diceListNew[-3] == diceListNew[-2] - 1 and diceListNew[-4] == diceListNew[-3] -1 and diceListNew[-5] == diceListNew[-4] - 1:
-            smallStraight = True
-            print(format("SMALL STRAIGHT", '>80s'))
+            litenStege = True
+            print(format("LITEN STEGE",'>80s'))
         else:
-            print(format("NOTHING SPECIAL", '>80s'))
+            print(format("INGET SPECIELLT", '>80s'))
     else:
         pass
-    result = yahtzee, fullHouse, smallStraight, largeStraight, fourOfKind, threeOfKind
+    result = yatzy, kåk, litenStege, storStege, fyrTal, Triss
     return result
 
 def main():
-    yahtzee = 0
-    fullHouse = 0
-    smallStraight = 0
-    largeStraight = 0
-    fourOfKind = 0
-    threeOfKind = 0
+    yatzy = 0
+    kåk = 0
+    litenStege = 0
+    storStege = 0 
+    fyrTal = 0 
+    Triss = 0
     statIndex = 0
-    yahtzeePer = 0
-    fullHousePer = 0
-    smallStraightPer = 0
-    largeStraightPer = 0
-    fourOfKindPer = 0
-    threeOfKindPer = 0
+    yatzySt = 0
+    kåkSt = 0
+    litenStegeSt = 0
+    storStegeSt = 0
+    fyrTalSt = 0
+    TrissSt = 0
 
     print("")
     print("-" * 80)
     print("")
-    print(format("Welcome to Fake Yahtzee!", '61s'), "Written by Coleo94")
+    print(format("VÄLKOMMEN TILL YATZY", '61s'))
     print("")
     print("-" * 80)
     print("")
-    print(format("Game 1", '>43s'))
+    print(format("SPEL 1", '>43s'))
     print("")
     game = singleGame()
     game = list(game)
     for x in game:
-        if x == True:
-            statIndex = game.index(x)
+       if x == True:
+           statIndex = game.index(x)
     if statIndex == 0:
-        yahtzee += 1
+        yatzy += 1
     elif statIndex == 1:
-        fullHouse += 1
+        kåk += 1
     elif statIndex == 2:
-        smallStraight += 1
+        litenStege += 1
     elif statIndex == 3:
-        largeStraight += 1
+        storStege += 1
     elif statIndex == 4:
-        fourOfKind += 1
+        fyrTal += 1
     elif statIndex == 5:
-        threeOfKind += 1
+        Triss += 1
     else:
         pass
     print("")
     gameCount = 1
-    print("END OF GAME", gameCount)
+    print("SLUTET AV SPEL", gameCount)
     print("-" * 80)
     print("")
-    gamesPrompt = input("Play another game? (y for yes, n for no): ")
+    gamesPrompt = input("SPELA EN GÅNG TILL??? (j för ja och n för nej): ")
     gamesPrompt.strip()
     gamesPrompt.lower()
-    while gamesPrompt != "y" and gamesPrompt != "n":
+    while gamesPrompt != "j" and gamesPrompt != "n":
         print("")
-        print("INCORRECT INPUT")
+        print("FEL INPUT")
         print("")
-        gamesPrompt = input("Play another game? (y for yes, n for no): ")
+        gamesPrompt = input("SPELA EN GÅNG TILL??? (j för ja och n för nej): ")
         gamesPrompt.strip()
         gamesPrompt.lower()
     print("")
-    
-    while gamesPrompt == "y":
+
+    while gamesPrompt == "j":
         gameCount += 1
         print("-" * 80)
         print("")
-        print(format("Game", '>43s'), gameCount)
+        print(format("Spel", '>43s'), gameCount)
         print("")
         game = singleGame()
         game = list(game)
@@ -278,85 +236,82 @@ def main():
             if x == True:
                 statIndex = game.index(x)
         if statIndex == 0:
-            yahtzee += 1
+            yatzy += 1
         elif statIndex == 1:
-            fullHouse += 1
+            kåk += 1
         elif statIndex == 2:
-            smallStraight += 1
+            litenStege += 1
         elif statIndex == 3:
-            largeStraight += 1
+            storStege += 1
         elif statIndex == 4:
-            fourOfKind += 1
+            fyrTal += 1
         elif statIndex == 5:
-            threeOfKind += 1
+            Triss += 1
         else:
             pass
         print("")
-        print(format("END OF GAME"), gameCount)
+        print(format("SPELET ÄR SLUT"), gameCount)
         print("-" * 80)
         print("")
-        gamesPrompt = input("Play another game? (y for yes, n for no): ")
+        gamesPrompt = input("SPELA EN GÅNG TILL??? (j för ja och n för nej): ")
         gamesPrompt.strip()
         gamesPrompt.lower()
-        while gamesPrompt != "y" and gamesPrompt != "n":
+        while gamesPrompt != "j" and gamesPrompt != "n":
             print("")
-            print("INCORRECT INPUT")
+            print("FEL INPUT")
             print("")
-            gamesPrompt = input("Play another game? (y for yes, n for no): ")
+            gamesPrompt = input("SPELA EN GÅNG TILL??? (j för ja och n för nej): ")
             gamesPrompt.strip()
             gamesPrompt.lower()
         print("")
     if gamesPrompt == "n":
-        yahtzeePer = (yahtzee / gameCount) * 100
-        fullHousePer = (fullHouse / gameCount) * 100
-        smallStraightPer = (smallStraight / gameCount) * 100
-        largeStraightPer = (largeStraight / gameCount) * 100
-        fourOfKindPer = (fourOfKind / gameCount) * 100
-        threeOfKindPer = (threeOfKind / gameCount) * 100
-        print("-" * 80)
+        yatzySt = (yatzy / gameCount) * 100
+        kåkSt = (kåk / gameCount) * 100
+        litenStegeSt = (litenStege / gameCount) * 100
+        storStegeSt = (storStege / gameCount) * 100
+        fyrTalSt = (fyrTal / gameCount) * 100
+        TrissSt = (Triss / gameCount) * 100
+        print("-"* 80)
         print("")
-        print(format("STATS", '>43s'))
+        print(format("STATISTIK", '>43s'))
         print("")
-        print("In", gameCount, "games, you rolled:\n")
-        if yahtzee > 1 or yahtzee == 0:
-            print("Yahtzees:", yahtzee, int(yahtzeePer), "%")
+        print("I", gameCount, "SPEL, DU RULLADE:\n")
+        if yatzy > 1 or yatzy == 0:
+            print("YATZYS:", yatzy, int(yatzySt), "%")
             print("")
         else:
-            print("Yahtzee:", yahtzee, int(yahtzeePer), "%")
+            print("YATZY:", yatzy, int(yatzySt), "%")
             print("")
-        if fullHouse > 1 or fullHouse == 0:
-            print("Full houses:", fullHouse, int(fullHousePer), "%")
-            print("")
-        else:
-            print("Full house:", fullHouse, int(fullHousePer), "%")
-            print("")
-        if smallStraight > 1 or smallStraight == 0:
-            print("Small straights:", smallStraight, int(smallStraightPer), "%")
+        if kåk > 1 or kåk == 0:
+            print("KÅKAR:", kåk, int(kåkSt), "%")
             print("")
         else:
-            print("Small straight:", smallStraight, int(smallStraightPer), "%")
+            print("KÅK:", kåk, int(kåkSt), "%")
             print("")
-        if largeStraight > 1 or largeStraight == 0:
-            print("Large straights:", largeStraight, int(largeStraightPer), "%")
-            print("")
-        else:
-            print("Large straight:", largeStraight, int(largeStraightPer), "%")
-            print("")
-        if fourOfKind > 1 or fourOfKind == 0:
-            print("Fours of a kind:", fourOfKind, int(fourOfKindPer), "%")
+        if litenStege > 1 or litenStege == 0:
+            print("SMÅ STEGAR:", litenStege, int(litenStegeSt), "%")
             print("")
         else:
-            print("Four of a kind:", fourOfKind, int(fourOfKindPer), "%")
+            print("LITEN STEGE:", litenStege, int(litenStegeSt), "%")
             print("")
-        if threeOfKind > 1 or threeOfKind == 0:
-            print("Threes of a kind:", threeOfKind, int(threeOfKindPer), "%")
+        if storStege > 1 or storStege == 0:
+            print("STORA STEGAR:", storStege, int(storStegeSt), "%")
             print("")
         else:
-            print("Three of a kind:", threeOfKind, round(threeOfKindPer, 2), "%")
+            print("STOR STEGE:", storStege, int(storStegeSt), "%")
             print("")
-        
+        if fyrTal > 1 or fyrTal == 0:
+            print("FYRTAL:", fyrTal, int(fyrTalSt), "%")
+            print("")
+        else:
+            print("FYRTAL:", fyrTal, int(fyrTalSt), "%")
+            print("")
+        if Triss > 1 or Triss == 0:
+            print("TRISSAR:", Triss, int(TrissSt), "%")
+            print("")
+        else:
+            print("TRISS:", Triss, int(TrissSt), "%")
+            print("")
+
 
 main()
-
-
-    
