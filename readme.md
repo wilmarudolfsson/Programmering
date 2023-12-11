@@ -1,11 +1,20 @@
 Loggbok
 ===========
+23 12 11
+----------
+Gjorde:
+### 7100 listor
+### Yatzy
+
+Fortsatt på mitt yatzy spel efter jag har varit sjuk. Inte klar än.
+
+
 23 12 04
 ----------
 Gjorde:
 ### 7100 listor
 
-Förtsatt på mitt yatzy spel. Har en bra bit kvar men har kommit en bra bit under denna lektion.
+Fortsatt på mitt yatzy spel. Har en bra bit kvar men har kommit en bra bit under denna lektion.
 
 
 23 12 01
