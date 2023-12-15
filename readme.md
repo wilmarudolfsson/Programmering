@@ -1,5 +1,13 @@
 Loggbok
 ===========
+23 12 15
+----------
+Gjorde:
+### 7080 definiera funktioner
+
+Började skriva om def och har gjort kod för att räkna ut olika temperaturer
+
+
 23 12 11
 ----------
 Gjorde:

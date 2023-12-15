@@ -28,11 +28,11 @@ if text == 'd':
     print(meddelande)'''
 
 
-alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'å', 'ä', 'ö', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'å', 'ä', 'ö']
 
 def caesar(start_text, shift_amount, cipher_direction):
   end_text = ""
-  if cipher_direction == "decode":
+  if cipher_direction == "dekryptera":
     shift_amount *= -1
   for char in start_text:
 
@@ -42,21 +42,21 @@ def caesar(start_text, shift_amount, cipher_direction):
       end_text += alphabet[new_position]
     else:
       end_text += char
-  print(f"Here's the {cipher_direction}d result: {end_text}")
+  print(f"Här är resultat: {end_text}")
 
 
 should_end = False
 while not should_end:
 
-  direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
-  text = input("Type your message:\n").lower()
-  shift = int(input("Type the shift number:\n"))
+  direction = input("Skriv 'k' för att kryptera, Skriv 'd' för att dekryptera:\n")
+  text = input("Skriv ditt meddelande:\n").lower()
+  shift = int(input("Skriv antal steg som ska shifta:\n"))
 
   shift = shift % 26
 
   caesar(start_text=text, shift_amount=shift, cipher_direction=direction)
 
-  restart = input("Type 'yes' if you want to go again. Otherwise type 'no'.\n")
-  if restart == "no":
+  restart = input("Skriv 'ja' om du vill göra det igen, annars skriv 'nej'.\n")
+  if restart == "nej":
     should_end = True
-    print("Goodbye")
+    print("Hejdå")
