@@ -32,7 +32,7 @@ def convert_tempertures(value, input_skala, output_skala):
 while True:
     print("Ange ingångstemperaturens värde: ")
     value = float(input())
-    print("Skriv in tempraturdskalan (C, F eller K): ")
+    print("Skriv in ingångstempraturdskalan (C, F eller K): ")
     input_skala = input().upper()
     print("Ange utgångstemperaturensskalan (C, F eller K): ")
     output_skala = input().upper()
