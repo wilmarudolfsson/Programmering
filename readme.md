@@ -13,14 +13,11 @@ Det känns bra att alla uppgifter är klara sista lektionen innan lovet.
 Exempel:
 
 if dots == 0:
+
         print(" ------- ", " ------- ", " ------- ", " ------- ", " ------- ", " ------- ")
-
         print("|       |", "|o      |", "|o      |", "|o     o|", "|o     o|", "|o     o|")
-
         print("|   o   |", "|       |", "|   o   |", "|       |", "|   o   |", "|o     o|")
-
         print("|       |", "|      o|", "|      o|", "|o     o|", "|o     o|", "|o     o|")
-        
         print(" ------- ", " ------- ", " ------- ", " ------- ", " ------- ", " ------- ")
 
 
