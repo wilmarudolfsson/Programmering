@@ -6,8 +6,11 @@ Gjorde:
 ### 7080 definiera funktioner
 
 Har skrivit kod för att räkna ut jämna och udda tal genom definitioner.
+
 Jag har också skrivit en kod son krypterar och dekrypterar Caesarshiffer med definitioner. 
+
 Gjorde klart alla uppgifterna så då satt jag och skrev kod för att printa ut tärningar och printa bilder.
+
 Det känns bra att alla uppgifter är klara sista lektionen innan lovet.
 
 Exempel:
