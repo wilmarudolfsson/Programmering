@@ -1,5 +1,12 @@
 Loggbok
 ===========
+24 01 12
+-------------
+### Tkinter
+
+Jag började med att leka runt lite med tkinter i python.
+
+
 23 12 18
 -----------
 Gjorde:
