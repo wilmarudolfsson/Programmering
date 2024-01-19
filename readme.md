@@ -1,5 +1,12 @@
 Loggbok
 ===========
+24 01 19
+-------------
+### Tkinter
+
+Jag hade distans hemma så jag satt och höll på och skriva på ett tre i rad spel och se lite hur man gör och försöka lära mig så jag vet vad jag ska göra sedan när jag ska skapa ett yatzy spel i tkinter.
+
+
 24 01 12
 -------------
 ### Tkinter
