@@ -1,5 +1,13 @@
 Loggbok
 ===========
+24 01 26
+-------------
+###Tkinter
+
+Fick löst så att tre i rad spelet fungerar och ska nu läsa och lära mig mer om hur man jobbar med tkinter. 
+Ska lära mig så jag vet vad jag ska göra när jag ska skapa yatzy spelet.
+
+
 24 01 19
 -------------
 ### Tkinter
