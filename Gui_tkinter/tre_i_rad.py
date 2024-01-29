@@ -29,7 +29,7 @@ class TicTacToeGame:
         self._current_moves = []
         self._has_winner = False
         self._winning_combos = []
-        self._setup_board()
+        self._setup_board() 
 
     def _setup_board(self):
         self._current_moves = [
