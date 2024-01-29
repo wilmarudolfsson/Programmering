@@ -4,11 +4,16 @@ Loggbok
 -------------
 ### Tkinter
 
-Vad jag vill att mitt Yatzy spel ska göra
+Idag har jag kollat igenom kod för att se vad jag ska göra för mitt yatzy spel. Jag har också gjort en lista i nummer ordning om vad jag ska göra först.
 
-* Slå tärningar
-* Välja vilka tärningar man vill behålla
-* Slå om tärningarna
+### Vad jag vill att mitt Yatzy spel ska göra:
+
+1. Slå tärningar
+2. Välja vilka tärningar man vill behålla
+3. Slå om tärningarna
+4. Välj vilka tärningar man vill behålla
+5. Slå om tärningarna
+
 
 
 24 01 26

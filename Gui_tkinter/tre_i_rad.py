@@ -16,8 +16,8 @@ class Move(NamedTuple):
 
 BOARD_SIZE = 3
 DEFAULT_PLAYERS = (
-    Player(label="X", color="blue"),
-    Player(label="O", color="green"),
+    Player(label="X", color="pink"),
+    Player(label="O", color="purple"),
 )
     
 class TicTacToeGame:
@@ -206,4 +206,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-    
