@@ -1,5 +1,14 @@
 Loggbok
 ===========
+24 02 05
+-------------
+### Tkinter
+
+Jag har ångrat mig att göra ett yatzy spel. Kände att jag har gjort så mycket annat i python om yatzy så jag vill göra något annat. Ska börja och göra snake i tkinter istället för det verkar mer kul.
+
+Har lärt mig om hur man använder HEX och hur de fungerar.
+
+
 24 01 29
 -------------
 ### Tkinter
