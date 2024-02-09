@@ -4,7 +4,7 @@ dator_poäng = 0
 spelare_poäng = 0
 val = ["sten", "sax", "påse"]
 
-print ("Välkommen till sten sax påse!")
+print ("Spelet sten sax påse!")
 
 #Loopa till någon har vunnit 5 gånger
 while dator_poäng < 3 and spelare_poäng < 3:
