@@ -1,5 +1,13 @@
 Loggbok
 ===========
+24 02 09
+-------------
+### Tkinter
+
+Har börjat att skriva kod för snake spelet i tkinter, men när jag blir klar med de så ska jag kolla in pygame för de ska vara lättare att skapa spel som snake där. 
+De har jag då som plan att jag ska göra efter när det jag har gjort i tkinter är färdigt. 
+
+
 24 02 05
 -------------
 ### Tkinter
