@@ -1,5 +1,12 @@
 Loggbok
 ===========
+24 02 19
+-------------
+### Tkinter
+
+Jag har fortsatt med mitt snake spel i tkinter. Jag börjar att bli klar men jag har lite småsaker att förändra.  
+
+
 24 02 09
 -------------
 ### Tkinter

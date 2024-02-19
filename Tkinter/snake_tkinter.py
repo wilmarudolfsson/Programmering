@@ -29,7 +29,7 @@ class Snake:
 
 
 class Food:
-    
+
     def __init__(self):
 
         x= random.randint(0,(GAME_WIDTH/SPACE_SIZE)-1)* SPACE_SIZE
@@ -79,7 +79,7 @@ def next_turn(snake, food):
     else:
         del snake.coordinates[-1]
 
-        canvas.delete(snake.squares[-1])
+        canvas.delete(snake.squares[-1]) 
 
         del snake.squares[-1]
 
