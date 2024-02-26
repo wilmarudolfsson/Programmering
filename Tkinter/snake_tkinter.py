@@ -3,7 +3,7 @@ from tkinter import *
 import random
 
 GAME_WIDTH = 600
-GAME_HEIGHT = 500
+GAME_HEIGHT = 400
 SPEED = 70
 SPACE_SIZE = 50
 BODY_PARTS = 3
@@ -71,7 +71,6 @@ def next_turn(snake, food):
         score += 1
 
         label.config(text="Score: {}".format(score))
-
         canvas.delete("food")
 
         food = Food()
@@ -92,7 +91,7 @@ def next_turn(snake, food):
 
 def change_direction(new_direction):
 
-    global direction 
+    global direction   
 
     if new_direction =='left':
         if direction!= 'right':
@@ -123,7 +122,7 @@ def check_collisons(snake):
         if x == body_part[0] and y == body_part[1]:
             return True
         
-    return False
+    return False 
 
 def  game_over():
     # canvas.delete(ALL)
@@ -131,7 +130,7 @@ def  game_over():
 
 
     reset_button = Button(text = "Restart", font=('consolas',20),command = reset)
-    canvas.create_window(250,400,window=reset_button)
+    canvas.create_window(300,300,window=reset_button)
 
 def reset():
     score = 0
@@ -159,7 +158,7 @@ canvas.pack()
 
 window.bind('<Left>',lambda event: change_direction('left'))
 window.bind('<Right>',lambda event: change_direction('right'))
-window.bind('<Up>',lambda event: change_direction('up'))
+window.bind('<Up>',lambda event: change_direction('up')) 
 window.bind('<Down>',lambda event: change_direction('down'))
 
 snake = Snake()
@@ -169,3 +168,4 @@ food =Food()
 next_turn(snake,food)
 
 window.mainloop()
+

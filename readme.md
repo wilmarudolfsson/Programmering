@@ -1,5 +1,12 @@
 Loggbok
 ===========
+24 02 26
+-----------
+### Tkinter
+
+Jag fortsatte med snake spelet och försökt att fixa storleken på rutan och också texten.
+
+
 24 02 19
 -------------
 ### Tkinter
