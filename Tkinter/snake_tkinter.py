@@ -120,7 +120,7 @@ def check_collisons(snake):
     
     for body_part in snake.coordinates[1:]:
         if x == body_part[0] and y == body_part[1]:
-            return True
+            return True 
         
     return False 
 
