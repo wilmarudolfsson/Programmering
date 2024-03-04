@@ -1,5 +1,11 @@
 Loggbok
 ===========
+24 03 04
+------------
+### Pygame
+
+Har installerat pygame på datorn och har suttit och försökt att lära mig hur man ska skriva koden.
+
 24 02 26
 -----------
 ### Tkinter
