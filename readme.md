@@ -1,5 +1,11 @@
 Loggbok
 ===========
+24 03 15
+-----------
+### Pygame
+
+Håller på att skriva in färdig kod för ett pygame spel för att förstå hur man ska använda det rätt och förstå språket. Ska fortsätta och lägga in bakrundsbilder nästa gång.
+
 24 03 04
 ------------
 ### Pygame
