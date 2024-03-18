@@ -1,5 +1,11 @@
 Loggbok
 ===========
+24 03 18
+-----------
+### Pygame
+
+Har fortsatt att skriva in koden för att kunna förstå hur man ska använda sig av pygame och vad som är viktigt att kunna för att enkelt kunna skriva spel.
+
 24 03 15
 -----------
 ### Pygame
