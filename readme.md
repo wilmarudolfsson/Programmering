@@ -1,5 +1,12 @@
 Loggbok
 ===========
+24 03 22
+----------
+### Pygame
+
+Jag har fortsatt att skriva in koden för att jag fastnade ett tag på hur man ska få in bilderna och insåg att jag inte kunde lösa det själv så jag fortsatte framåt så får jag be om hjälp om hur man fixar det på måndag.
+
+
 24 03 18
 -----------
 ### Pygame
