@@ -27,7 +27,7 @@ SCREEN_HEIGHT = 600
 class Player(pygame.sprite.Sprite):
     def __init__(self):
         super(Player, self).__init__()
-        self.surf = pygame.image.load("jet.png").convert()
+        self.surf = pygame.image.load("Pygame/jet.png").convert()
         self.surf.set_colorkey((255, 255, 255), RLEACCEL)
         self.rect = self.surf.get_rect()
 
@@ -35,8 +35,10 @@ class Player(pygame.sprite.Sprite):
     def update(self, pressed_keys):
         if pressed_keys[K_UP]:
             self.rect.move_ip(0, -5)
+            move_up_sound.play()
         if pressed_keys[K_DOWN]:
             self.rect.move_ip(0, 5)
+            move_down_sound.play()
         if pressed_keys[K_LEFT]:
             self.rect.move_ip(-5, 0)
         if pressed_keys[K_RIGHT]:
@@ -60,7 +62,7 @@ pygame.init()
 class Enemy(pygame.sprite.Sprite):
     def __init__(self):
         super(Enemy, self).__init__()
-        self.surf = pygame.image.load("missile.png").convert() 
+        self.surf = pygame.image.load("Pygame/missile.png").convert() 
         self.surf.set_colorkey((255, 255, 255), RLEACCEL)
         self.rect = self.surf.get_rect(
             center=(
@@ -82,7 +84,7 @@ class Enemy(pygame.sprite.Sprite):
 class Cloud(pygame.sprite.Sprite):
     def __init__(self):
         super(Cloud, self).__init__()
-        self.surf = pygame.image.load("cloud.png").convert()
+        self.surf = pygame.image.load("Pygame/cloud.png").convert()
         self.surf.set_colorkey((0, 0, 0), RLEACCEL)
         # The starting position is randomly generated
         self.rect = self.surf.get_rect(
@@ -101,6 +103,12 @@ class Cloud(pygame.sprite.Sprite):
 # Create the screen object
 # The size is determined by the constant SCREEN_WIDTH and SCREEN_HEIGHT
 screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
+
+# Setup for sounds. Defaults are good.
+pygame.mixer.init()
+
+# Initialize pygame
+pygame.init()
 
 # Setup the clock for a decent framerate
 clock = pygame.time.Clock()
@@ -124,6 +132,18 @@ all_sprites.add(player)
 # Variable to keep the main loop running
 running = True
 
+# Load and play background music
+# Sound source: http://ccmixter.org/files/Apoxode/59262
+# License: https://creativecommons.org/licenses/by/3.0/
+pygame.mixer.music.load("Pygame/Apoxode_-_Electric_1.mp3")
+pygame.mixer.music.play(loops=-1)
+
+# Load all sound files
+# Sound sources: Jon Fincher
+move_up_sound = pygame.mixer.Sound("Pygame/Rising_putter.ogg")
+move_down_sound = pygame.mixer.Sound("Pygame/Falling_putter.ogg")
+collision_sound = pygame.mixer.Sound("Pygame/Collision.ogg")
+
 # Main loop
 while running:
     # for loop through the event queue
@@ -144,6 +164,7 @@ while running:
             new_enemy = Enemy()
             enemies.add(new_enemy)
             all_sprites.add(new_enemy)
+
         # Add a new cloud?
         elif event.type == ADDCLOUD:
             # Create the new cloud and add it to sprite groups
@@ -168,9 +189,15 @@ while running:
 
     # Check if any enemies have collided with the player
     if pygame.sprite.spritecollideany(player, enemies):
-        
+
         # If so, then remove the player and stop the loop
         player.kill()
+
+        # Stop any moving sounds and play the collision sound
+        move_up_sound.stop()
+        move_down_sound.stop()
+        collision_sound.play()
+
         running = False
 
     # Update the display
@@ -178,3 +205,7 @@ while running:
 
     # Ensure program maintains a rate of 30 frames per second
     clock.tick(30)
+
+# All done! Stop and quit the mixer.
+pygame.mixer.music.stop()
+pygame.mixer.quit()

@@ -1,5 +1,12 @@
 Loggbok
 ===========
+24 03 25
+----------
+### Pygame
+
+Jag har fortsatt att skriva in koden för detta spelet som jag ska försöka lära mig hur pygame fungerar. FIck löst hur man skulle få in bilderna och det var bara så enkelt som att dra in länken i koden så den stod i koden.
+
+
 24 03 22
 ----------
 ### Pygame
