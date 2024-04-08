@@ -1,5 +1,13 @@
 Loggbok
 ===========
+24 04 08
+----------
+### Pygame
+
+Jag har gjort så att all kod står i ordningen som den ska och att den fungerar. 
+Nu kollar jag igenom koden och ser vad som kan vara bra att ha när jag gör mitt eget spel och hur man ska bygga upp det på bästa sätt.
+
+
 24 03 25
 ----------
 ### Pygame
