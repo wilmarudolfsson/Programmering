@@ -1,5 +1,12 @@
 Loggbok
 ===========
+24 04 12
+----------
+### Pygame
+
+Jag har börjat göra om koden och ändra en del saker i den så det blir lite som ett annat spel men med samma typ av uppbyggnad för att göra det lättare för mig att förstå hur det ska vara uppbyggt.
+
+
 24 04 08
 ----------
 ### Pygame
