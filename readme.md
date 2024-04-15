@@ -1,5 +1,12 @@
 Loggbok
 ===========
+24 04 15
+----------
+### Pygame
+
+Jag har börjat jobba på att sätta in en timer på hur länge man är vid liv i spelet.
+
+
 24 04 12
 ----------
 ### Pygame
