@@ -27,7 +27,7 @@ SCREEN_HEIGHT = 600
 class Player(pygame.sprite.Sprite):
     def __init__(self):
         super(Player, self).__init__()
-        self.surf = pygame.image.load("Pygame/8v5cwfjq.png").convert()
+        self.surf = pygame.image.load("Pygame/jet.png").convert()
         self.surf.set_colorkey((255, 255, 255), RLEACCEL)
         self.rect = self.surf.get_rect()
 
@@ -53,9 +53,6 @@ class Player(pygame.sprite.Sprite):
             self.rect.top = 0
         if self.rect.bottom >= SCREEN_HEIGHT:
             self.rect.bottom = SCREEN_HEIGHT
-
-# Initialize pygame
-pygame.init()
 
 # Define the enemy object by extending pygame.sprite.Sprite
 # The surface you draw on the screen is now an attribute of 'enemy'
@@ -100,6 +97,7 @@ class Cloud(pygame.sprite.Sprite):
         self.rect.move_ip(-5, 0)
         if self.rect.right < 0:
             self.kill()
+
 # Create the screen object
 # The size is determined by the constant SCREEN_WIDTH and SCREEN_HEIGHT
 screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
@@ -136,7 +134,7 @@ running = True
 # Sound source: http://ccmixter.org/files/Apoxode/59262
 # License: https://creativecommons.org/licenses/by/3.0/
 pygame.mixer.music.load("Pygame/Apoxode_-_Electric_1.mp3")
-pygame.mixer.music.play(loops=-1)
+pygame.mixer.music.play(loops = -1)
 
 # Load all sound files
 # Sound sources: Jon Fincher
