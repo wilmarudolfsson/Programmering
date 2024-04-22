@@ -1,5 +1,11 @@
 Loggbok
 ===========
+24 04 22
+----------
+### Pygame
+
+Jag har börjat att skriva kod till ett snake spel eftersom jag gjorde ett i konsollen för ett tag sen så ska testa att göra det i pygame nu.
+
 24 04 15
 ----------
 ### Pygame
