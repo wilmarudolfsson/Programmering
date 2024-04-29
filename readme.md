@@ -1,5 +1,10 @@
 Loggbok
 ===========
+24 04 29
+----------
+### Pygame
+
+Jag har fortsatt att skriva kod till snakespelet. Men nu på slutet ville den inte fungera så jag ska försöka hitta felet på nästa lektion och lösa det.
 24 04 22
 ----------
 ### Pygame
