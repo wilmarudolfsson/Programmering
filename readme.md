@@ -1,10 +1,17 @@
 Loggbok
 ===========
+24 05 03
+----------
+### Pygame
+
+Under denna lektionen har jag fått löst problemet och tagit bort och lagt till saker så att det ska fungera, vilket det nu gör. Det tog ett tag men nu tror jag att allt ska fungera som det ska. Ska testa det lite mer nästa lektion och se ifall jag kan lägga till något elller börja på ett nytt spel.
+
 24 04 29
 ----------
 ### Pygame
 
 Jag har fortsatt att skriva kod till snakespelet. Men nu på slutet ville den inte fungera så jag ska försöka hitta felet på nästa lektion och lösa det.
+
 24 04 22
 ----------
 ### Pygame
