@@ -1,10 +1,16 @@
 Loggbok
 ===========
+24 05 06
+----------
+### Pygame
+
+Idag har jag hållt på att göra små ändringar i min kod som att byta lite färger för att göra det enklare att se. Jag har också gjort rutan mindre för att det blev lite svårt när den blev så stor. Nästa lektion ska jag nog börja med ett nytt spel att göra. 
+
 24 05 03
 ----------
 ### Pygame
 
-Under denna lektionen har jag fått löst problemet och tagit bort och lagt till saker så att det ska fungera, vilket det nu gör. Det tog ett tag men nu tror jag att allt ska fungera som det ska. Ska testa det lite mer nästa lektion och se ifall jag kan lägga till något elller börja på ett nytt spel.
+Under denna lektionen har jag fått löst problemet och tagit bort och lagt till saker så att det ska fungera, vilket det nu gör. Det tog ett tag men nu tror jag att allt ska fungera som det ska. Ska testa det lite mer nästa lektion och se ifall jag kan lägga till något eller börja på ett nytt spel.
 
 24 04 29
 ----------

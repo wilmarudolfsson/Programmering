@@ -2,16 +2,16 @@ import pygame
 import time
 import random
 
-snake_speed = 15
+snake_speed = 16
 
-window_x = 720
-window_y = 480
+window_x = 620
+window_y = 380
 
 black =pygame.Color(0, 0, 0)
 white = pygame.Color(255, 255, 255)
-red = pygame.Color(255, 0, 0)
-green = pygame.Color(0, 255, 0)
-blue = pygame.Color(0, 0, 255)
+moon_glow = pygame.Color(235, 245, 255)
+sky_blue = pygame.Color(0, 255, 255)
+pink = pygame.Color(255, 100, 180)
 
 pygame.init()
 
@@ -42,7 +42,7 @@ def show_score(choice, color, font, size):
 
     score_font = pygame.font.SysFont(font, size)
 
-    score_surface = score_font.render('Score : ' + str(score), True, color)
+    score_surface = score_font.render('Poäng : ' + str(score), True, color)
 
     score_rect = score_surface.get_rect()
 
@@ -53,7 +53,7 @@ def game_over():
 
     my_font = pygame.font.SysFont('times new roman', 50)
 
-    game_over_surface = my_font.render('Your Score is :' + str(score), True, red)
+    game_over_surface = my_font.render('Dina poäng är : ' + str(score), True, moon_glow)
 
     game_over_rect = game_over_surface.get_rect()
 
@@ -117,11 +117,11 @@ while True:
     game_window.fill(black)
 
     for pos in snake_body:
-        pygame.draw.rect(game_window, green, 
+        pygame.draw.rect(game_window, sky_blue, 
                          pygame.Rect(pos[0], pos[1], 10, 10))
 
- 
-    pygame.draw.rect(game_window, blue,
+
+    pygame.draw.rect(game_window, pink,
                      pygame.Rect(fruit_position[0], fruit_position[1], 10, 10))
                         
     
