@@ -105,6 +105,7 @@ while True:
     if snake_position[0] == fruit_position[0] and snake_position[1] == fruit_position[1]:
         score += 10
         fruit_spawn = False
+        
     else:
         pass
         snake_body.pop(-1)
@@ -133,6 +134,7 @@ while True:
     
     for block in snake_body[1:]:
         if snake_position[0] == block[0] and snake_position[1] == block[1]:
+
             game_over()
             
 
@@ -143,3 +145,4 @@ while True:
     fps.tick(snake_speed)
 
         
+

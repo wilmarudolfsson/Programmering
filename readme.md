@@ -1,5 +1,11 @@
 Loggbok
 ===========
+24 05 20
+----------
+### Pygame
+
+Jag fortsatte med mitt snakespel och städat upp lite i koden och gjort litere små ändringar. Ska börja och göra något nytt nästa lektion.
+
 24 05 06
 ----------
 ### Pygame
