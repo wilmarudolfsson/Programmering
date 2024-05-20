@@ -105,7 +105,7 @@ while True:
     if snake_position[0] == fruit_position[0] and snake_position[1] == fruit_position[1]:
         score += 10
         fruit_spawn = False
-        
+
     else:
         pass
         snake_body.pop(-1)
