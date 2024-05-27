@@ -1,5 +1,11 @@
 Loggbok
 ===========
+24 05 27
+----------
+### Pygame
+
+Jag har börjat på ett tre i rad spel i pygame. Har gjort ett innan som var i pygame konsollen men nu gör jag ett som är i pygame istället.
+
 24 05 20
 ----------
 ### Pygame
