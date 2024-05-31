@@ -1,5 +1,11 @@
 Loggbok
 ===========
+24 05 31
+----------
+### Pygame 
+
+Jag fortsatte på mitt tre i rad spel men jag är inte klar än.
+
 24 05 27
 ----------
 ### Pygame

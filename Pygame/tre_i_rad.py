@@ -68,4 +68,5 @@ def draw_status():
     screen.blit(text, text_rect)
     pg.display.update()
     
+    
 
