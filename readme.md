@@ -1,5 +1,11 @@
 Loggbok
 ===========
+24 06 03
+----------
+### Pygame
+
+Idag har jag nästan skrivit klart min kod för mitt tre i rad spel. Ska bara göra klart det sista nästa gång och välje images för hur mina X och O ska se ut på brädan och lägga in dom i koden.
+
 24 05 31
 ----------
 ### Pygame 
