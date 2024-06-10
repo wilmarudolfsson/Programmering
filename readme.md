@@ -1,5 +1,11 @@
 Loggbok
 ===========
+24 06 10
+----------
+### Pygame
+
+Idag var sista lektionen i programmeringen. Under denna lektionen har jag gjort klart mitt tre i rad spel. Har även kollat att jag inte har några uppgifter som jag behöver ha gjort klart. 
+
 24 06 03
 ----------
 ### Pygame

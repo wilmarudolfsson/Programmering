@@ -25,9 +25,9 @@ CLOCK = pg.time.Clock()
 screen = pg.display.set_mode((width, height + 100), 0, 32)
 pg.display.set_caption("Tre i Rad")
 
-initiating_window = pg.image.load("")
-x_img = pg.image.load("")
-y_img = pg.image.load("")
+initiating_window = pg.image.load("Pygame/modified_cover-100x100.png")
+x_img = pg.image.load("Pygame/X_modified-100x100.png")
+y_img = pg.image.load("Pygame/o_modified-100x100.png")
 
 initiating_window = pg.transform.scale(
     initiating_window, (width, height + 100))
@@ -123,8 +123,9 @@ def drawXO(row, col):
     board[row-1][col-1] = XO
 
     if (XO == 'x'):
-        screen.blit(x_img, (posy, posx))
-        XO = 'o'
+         screen.blit(x_img, (posy, posx))
+         XO = 'o'
+
     else:
         screen.blit(o_img, (posy, posx))
         XO = 'x'
@@ -184,3 +185,4 @@ while(True):
                 reset_game()
     pg.display.update()
     CLOCK.tick(fps)
+
